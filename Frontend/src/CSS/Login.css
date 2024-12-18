@@ -1,0 +1,171 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  padding: 10px;
+  margin: 50px;
+  
+}
+
+.login-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  
+}
+
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  color: black;/*#1e73fa*/
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.login-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.login-tab {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-tab.active {
+  background-color: #1e73fa;
+  color: white;
+}
+
+/* Input fields */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.forgot-password {
+  text-align: right;
+  display: block;
+  margin: 10px 0;
+  color: #1e73fa;
+  font-size: 14px;
+}
+
+/* Buttons */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.google-login-btn {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.google-login-btn img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* Sign-up link */
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #1e73fa;
+  text-decoration: none;
+}
+
+.login-message{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #4caf50;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 15px;
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+
+  .login-btn,
+  .google-login-btn {
+    font-size: 14px;
+  }
+
+  .login-tab {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,133 @@
+.our-story {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  
+}
+
+.our-story-img {
+  flex: 1;
+  max-width: 50%;
+  background-image: url('https://res.cloudinary.com/ddkn14jmn/image/upload/v1734455657/pizza-cover-3_mbtmpa.jpg'); 
+  background-position: center;
+  background-repeat: no-repeat; 
+  min-height: 550px; 
+}
+
+.our-story-content {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.our-story-header {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.our-story-paragraf {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.our-story-liste {
+  font-size: 1.1em;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.our-story-liste li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.our-story-liste li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #E14D2A;
+}
+
+
+.btn-2 {
+  background-color:#E14D2A; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+
+  
+/* Responsive */
+@media (max-width: 1024px) {
+  .our-story {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .our-story-img {
+    max-width: 100%;
+    min-height: 300px; 
+    background-size: cover; 
+  }
+
+  .our-story-content {
+    max-width: 100%;
+  }
+
+  .our-story-header {
+    text-align: center;
+  }
+
+  .our-story-buton {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-story-header {
+    font-size: 2em;
+  }
+
+  .our-story-paragraf {
+    font-size: 1em;
+  }
+
+  .our-story-liste {
+    font-size: 1em;
+  }
+
+  .btn-2 {
+    font-size: 1em;
+  }
+
+  .our-story-img {
+    min-height: 350px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .our-story-header {
+    font-size: 1.8em;
+  }
+
+  .our-story-paragraf {
+    font-size: 0.9em;
+  }
+
+  .btn-2 {
+    font-size: 0.9em;
+  }
+
+  .our-story-img {
+    min-height: 200px; 
+    background-size: cover; 
+  }
+}

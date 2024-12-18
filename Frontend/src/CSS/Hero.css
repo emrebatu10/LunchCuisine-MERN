@@ -1,0 +1,154 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1500px;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.main-left {
+  width: 50%;
+  padding: 20px;
+}
+
+.main-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://res.cloudinary.com/ddkn14jmn/image/upload/v1734455353/default_kbssic.png');
+  background-size: cover;
+  background-position: center
+}
+
+.heading-container-first,
+.heading-container-second {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.heading-container {
+
+  font-size: 1.1rem;
+}
+
+.icon-1,
+.icon-2 {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 5px;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.btn {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn:hover {
+
+  border: 1px solid black;
+}
+
+.icon-section {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.icon-section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-section img {
+  width: 45px;
+  height: 45px;
+}
+
+.icon-section span {
+  margin-top: 5px;
+  
+  font-size: 1rem;
+ 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-left,
+  .main-right {
+    width: 100%;
+  }
+
+  .heading-container-first,
+  .heading-container-second {
+    font-size: 2rem;
+  }
+
+  .heading-container {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .icon-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-section div {
+    margin-bottom: 15px;
+    
+  }
+
+  .icon-section img {
+    width: 30px;
+    
+    height: 30px;
+  }
+
+  .icon-section span {
+    font-size: 0.9rem;
+    
+  }
+}
+
+@media (max-width: 480px) {
+
+  .heading-container-first,
+  .heading-container-second {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .icon-section img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .icon-section span {
+    font-size: 0.8rem;
+  }
+}
