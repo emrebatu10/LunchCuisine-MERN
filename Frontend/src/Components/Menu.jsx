@@ -14,10 +14,10 @@ const Menu = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const categoriesResponse = await fetch("/api/categories");
+                const categoriesResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/categories`);
                 const categoriesData = await categoriesResponse.json();
 
-                const productsResponse = await fetch("/api/products");
+                const productsResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/products`);
                 const productsData = await productsResponse.json();
 
                 setCategories(['All', ...categoriesData.map(category => category.name)]);

@@ -6,25 +6,26 @@ const Product = require("../models/product.js");
 router.post("/", async (req, res) => {
     try {
         
-        const newProduct = newProduct( req.body );
+        const newProduct = new Product(req.body);
         await newProduct.save();
-        res.status(201).json(newProduct); // success status code 
+        res.status(201).json(newProduct);  // Successful creation status
 
     } catch (error) {
-        console.log(error)
+        console.log("Error creating product:", error);
+        res.status(500).json({ error: "Failed to create product" });
     }
-})
+});
 
-//  Get  all products
+// Get all products
 router.get("/", async (req, res) => {
     try {
-        const product = await Product.find();
-        res.status(200).json(product);
+        const products = await Product.find();
+        res.status(200).json(products);
 
     } catch (error) {
-        console.log(error);
-        res.status(500).json({ error: "Server error" })
+        console.log("Error fetching products:", error);
+        res.status(500).json({ error: "Server error" });
     }
-})
+});
 
 module.exports = router;

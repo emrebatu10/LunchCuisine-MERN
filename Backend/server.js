@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const port = 5000;
+const port = process.env.PORT || 5000;
 const dotenv = require("dotenv");
 const mainRoute = require("./routes/index.js");
 const cors = require('cors');
@@ -9,39 +9,43 @@ const path = require('path');
 
 dotenv.config();
 
+// Make MongoDB connection asynchronously
 const connect = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI);
-        console.log("connected to mongodb");
-
+        console.log("Connected to MongoDB");
     } catch (error) {
-        throw (error);
-
+        console.error("Failed to connect to MongoDB:", error);
+        process.exit(1); // Stop the application on error
     }
-}
+};
 
+// Middlewares
+app.use(cors()); // Cross-Origin Resource Sharing
+app.use(express.json()); // Parse all incoming requests as JSON
 
-
-// middlewares
-
-app.use(express.json()); // Convert all incoming files to json
-app.use("/api",mainRoute);
-app.use(cors());
-
-
-// Serve dist folder statically
-app.use(express.static(path.join(__dirname, '../Frontend/dist')));
-
-
-
-// Return React's index.html for all other requests
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Frontend/dist', 'index.html'));
-
+// Redirect to root URL
+app.get("/", (req, res) => {
+    res.send("Welcome to the Lunch Cuisine API!");
 });
 
 
-app.listen(port, () => {
-    connect();
-    console.log("The server is running on port 5000");
-})
+
+// API routes
+app.use("/api", mainRoute);
+
+// 404 error management
+app.all("*", (req, res) => {
+    res.status(404).json({ message: "Endpoint not found" });
+});
+
+// Start the server
+const startServer = async () => {
+    await connect(); // Wait until MongoDB connection is successful
+    app.listen(port, () => {
+        console.log(`The server is running on port ${port}`);
+    });
+};
+
+// Start the server
+startServer();
