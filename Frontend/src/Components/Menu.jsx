@@ -24,7 +24,7 @@ const Menu = () => {
                 setProducts(productsData);
             } catch (error) {
                 console.error("Error fetching data:", error);
-                alert("There was a problem fetching data. Please try again later.");
+                alert("There was a problem fetching data. Please try again.");
             }
         };
 
