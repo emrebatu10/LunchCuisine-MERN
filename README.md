@@ -79,7 +79,7 @@ This will start the React development server, usually accessible at `http://loca
 If your frontend application requires any environment variables, create a `.env` file in the `Frontend` directory and define them. For example, you might need to set the API URL:
 
 ```
-REACT_APP_API_URL=http://localhost:5000
+VITE_API_URL = http://localhost:5000
 ```
 
 ## Running Both Servers Simultaneously
