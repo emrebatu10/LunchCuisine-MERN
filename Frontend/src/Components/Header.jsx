@@ -62,7 +62,7 @@ function Header() {
             <Nav.Link as={Link} to="/cart" className="mx-1 d-flex align-items-center position-relative">
               <FiShoppingCart className="nav-icon" />
               {cartItemCount > 0 && (
-                <span className="cart-count-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span id ="cart-count-badge" className="cart-count-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {cartItemCount}
                 </span>
               )}

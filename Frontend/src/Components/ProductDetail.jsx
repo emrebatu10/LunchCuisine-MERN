@@ -186,7 +186,7 @@ const ProductDetail = () => {
                 </div>
 
                 <div className="cart-buttons">
-                    <button className="continue-shopping-btn" onClick={handleBackToMenu}>Back to Menu</button>
+                    <button className="back-to-menu-btn" onClick={handleBackToMenu}>Back to Menu</button>
                     <button
                         className="add-to-cart-btn"
                         onClick={addToCart}

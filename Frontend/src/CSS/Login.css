@@ -2,10 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 100vh;
-  padding: 10px;
-  margin: 50px;
-  
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .login-box {
@@ -15,17 +13,16 @@
   padding: 30px;
   width: 100%;
   max-width: 400px;
-  
 }
 
 .login-title {
   text-align: center;
   font-size: 24px;
-  color: black;/*#1e73fa*/
+  color: #000;
   margin-bottom: 20px;
 }
 
-/* Tabs */
+
 .login-tabs {
   display: flex;
   justify-content: space-between;
@@ -47,7 +44,7 @@
   color: white;
 }
 
-/* Input fields */
+
 .login-input {
   width: 100%;
   padding: 12px;
@@ -77,7 +74,7 @@
   font-size: 14px;
 }
 
-/* Buttons */
+
 .login-btn {
   width: 100%;
   padding: 12px;
@@ -108,7 +105,7 @@
   margin-right: 10px;
 }
 
-/* Sign-up link */
+
 .signup-link {
   text-align: center;
   margin-top: 20px;
@@ -120,7 +117,7 @@
   text-decoration: none;
 }
 
-.login-message{
+.login-message {
   text-align: center;
   padding-top: 10px;
 }
@@ -143,29 +140,129 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* Responsive */
-@media (max-width: 768px) {
+
+/* (max-width: 1024px) */
+@media (max-width: 1024px) {
   .login-box {
-    padding: 20px;
-    width: 100%;
+    padding: 25px;
+    max-width: 350px;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .login-tab {
+    font-size: 15px;
   }
 }
 
-@media (max-width: 480px) {
-  .login-box {
+/* (max-width: 768px) */
+@media (max-width: 768px) {
+  .login-container {
     padding: 15px;
+  }
+
+  .login-box {
+    padding: 20px;
+    max-width: 100%;
   }
 
   .login-title {
     font-size: 20px;
   }
 
+  .login-input {
+    font-size: 13px;
+  }
+
+  .forgot-password {
+    font-size: 13px;
+  }
+
   .login-btn,
   .google-login-btn {
-    font-size: 14px;
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* (max-width: 480px) */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 15px;
+  }
+
+  .login-title {
+    font-size: 18px;
   }
 
   .login-tab {
     font-size: 14px;
+    padding: 8px;
+  }
+
+  .login-input {
+    padding: 10px;
+  }
+
+  .login-btn,
+  .google-login-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .forgot-password {
+    font-size: 12px;
+  }
+
+  .signup-link {
+    font-size: 12px;
+  }
+}
+
+/* (max-width: 360px) */
+@media (max-width: 360px) {
+  .login-box {
+    padding: 10px;
+  }
+
+  .login-title {
+    font-size: 16px;
+  }
+
+  .login-tab {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .login-input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .login-btn,
+  .google-login-btn {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .forgot-password {
+    font-size: 11px;
+  }
+
+  .signup-link {
+    font-size: 11px;
   }
 }

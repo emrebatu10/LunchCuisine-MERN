@@ -22,9 +22,15 @@ function Hero() {
           <div className="heading-container-first">WELCOME TO</div>
           <div className="heading-container-second">Lunch Cuisine Pizzeria</div>
 
-          <div className="heading-container"> <img className='icon-1' src="https://res.cloudinary.com/ddkn14jmn/image/upload/v1734455436/gps-icon_ostku6.png" alt="" /> 254 W 27ST ST, NEW YORK, NY 10011</div>
-          <div className="heading-container"> <img className='icon-1' src="https://res.cloudinary.com/ddkn14jmn/image/upload/v1734455436/gps-icon_ostku6.png" alt="" />(212) 123-4567</div>
-          <div className="heading-container"> <img className='icon-1' src="https://res.cloudinary.com/ddkn14jmn/image/upload/v1734455438/telefon-icon_pkyjhm.png" alt="" />341 W 11ST ST, NEW YORK, NY 10022</div>
+          <div className='icon-container'>
+
+            <div className="heading-container"> <img className='icon-1' src="https://res.cloudinary.com/ddkn14jmn/image/upload/v1734455436/gps-icon_ostku6.png" alt="" /> 254 W 27ST ST, NEW YORK, NY 10011</div>
+            <div className="heading-container"> <img className='icon-1' src="https://res.cloudinary.com/ddkn14jmn/image/upload/v1734455438/telefon-icon_pkyjhm.png" alt="" />(212) 123-4567</div>
+            <div className="heading-container"> <img className='icon-1' src="https://res.cloudinary.com/ddkn14jmn/image/upload/v1734455436/gps-icon_ostku6.png" alt="" />341 W 11ST ST, NEW YORK, NY 10022</div>
+
+          </div>
+
+
           <button type="button" className="btn" onClick={handleClick}>VIEW MENU</button>
 
         </div>
@@ -32,11 +38,11 @@ function Hero() {
 
         <div className="main-right">
 
-          
+
         </div>
 
-        
-       
+
+
 
       </main>
 

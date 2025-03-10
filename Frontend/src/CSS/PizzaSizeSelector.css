@@ -1,63 +1,134 @@
 .pizza-size-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .pizza-sizes {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pizza-sizes {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.pizza-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+.pizza-size.selected {
+  border-color: blue;
+}
+
+.pizza-image {
+  width: 80px;
+  height: 80px;
+}
+
+.pizza-info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.pizza-label {
+  font-weight: bold;
+}
+
+.pizza-slices {
+  font-size: 12px;
+  color: gray;
+}
+
+.pizza-price {
+  font-size: 14px;
+  color: red;
+}
+
+.selected-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: blue;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+
+/* (max-width: 768px) */
+@media (max-width: 768px) {
   .pizza-size {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 70px;
-    height: 70px;
-    position: relative;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
   }
-  
-  .pizza-size.selected {
-    border-color: blue;
-  }
-  
+
   .pizza-image {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
-  
-  .pizza-info {
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  .pizza-label {
-    font-weight: bold;
-  }
-  
+
   .pizza-slices {
-    font-size: 12px;
-    color: gray;
+    font-size: 10px;
   }
-  
+
   .pizza-price {
-    font-size: 14px;
-    color: red;
+    font-size: 12px;
   }
-  
+
   .selected-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: blue;
-    font-size: 18px;
+    font-size: 16px;
+    top: 8px;
+    right: 8px;
   }
-  
+}
+
+
+/* (max-width: 480px) */
+@media (max-width: 480px) {
+  .pizza-size {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+  }
+
+  .pizza-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .pizza-slices {
+    font-size: 8px;
+  }
+
+  .pizza-price {
+    font-size: 10px;
+  }
+
+  .selected-icon {
+    font-size: 14px;
+    top: 6px;
+    right: 6px;
+  }
+}

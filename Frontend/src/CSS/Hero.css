@@ -4,12 +4,16 @@
   padding: 20px;
   max-width: 1500px;
   height: 70vh;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .main-left {
+  display: flex;
+  flex-direction: column;
   width: 50%;
-  padding: 20px;
+  align-items: center;
+
+
 }
 
 .main-right {
@@ -19,7 +23,7 @@
   align-items: center;
   background-image: url('https://res.cloudinary.com/ddkn14jmn/image/upload/v1734455353/default_kbssic.png');
   background-size: cover;
-  background-position: center
+  background-position: center;
 }
 
 .heading-container-first,
@@ -28,9 +32,12 @@
   color: #333;
 }
 
-.heading-container {
 
+
+.heading-container {
   font-size: 1.1rem;
+
+
 }
 
 .icon-1,
@@ -51,18 +58,20 @@
   border-radius: 8px;
   cursor: pointer;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .btn:hover {
-
   border: 1px solid black;
 }
 
 .icon-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: auto;
   max-width: 1000px;
-  margin: 30px auto;
+
+
 }
 
 .icon-section div {
@@ -78,16 +87,61 @@
 
 .icon-section span {
   margin-top: 5px;
-  
   font-size: 1rem;
- 
 }
 
-/* Responsive */
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Responsive */
+
+
+/*  (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .icon-section {
+    padding: 10px;
+    margin: 10px;
+
+  }
+
+  .main-container {
+    padding: 15px;
+    height: 65vh;
+  }
+
+
+  .main-left,
+  .main-right {
+    width: 100%;
+  }
+
+
+  .main-right {
+    height: 40vh;
+  }
+
+  .heading-container-first,
+  .heading-container-second {
+    font-size: 2.2rem;
+  }
+}
+
+/* (max-width: 768px) */
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
     text-align: center;
+    height: auto;
+
   }
 
   .main-left,
@@ -100,6 +154,10 @@
     font-size: 2rem;
   }
 
+  .icon-container {
+    text-align: start;
+  }
+
   .heading-container {
     font-size: 1rem;
   }
@@ -109,28 +167,23 @@
     font-size: 0.9rem;
   }
 
-  .icon-section {
-    flex-direction: column;
-    align-items: center;
-  }
+
 
   .icon-section div {
     margin-bottom: 15px;
-    
   }
 
   .icon-section img {
     width: 30px;
-    
     height: 30px;
   }
 
   .icon-section span {
     font-size: 0.9rem;
-    
   }
 }
 
+/* (max-width: 480px) */
 @media (max-width: 480px) {
 
   .heading-container-first,
@@ -150,5 +203,42 @@
 
   .icon-section span {
     font-size: 0.8rem;
+  }
+}
+
+/* (max-width: 360px) */
+@media (max-width: 360px) {
+
+  .heading-container-first,
+  .heading-container-second {
+    font-size: 1.2rem;
+  }
+
+  .heading-container {
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  .icon-section img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-section span {
+    font-size: 0.7rem;
+  }
+
+  .icon-section {
+    margin-bottom: 0px;
+
+  }
+
+  .icon-1 {
+    width: 20px;
+    height: 20px;
   }
 }

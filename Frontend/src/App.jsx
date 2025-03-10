@@ -9,6 +9,7 @@ import RegisterPage from '../pages/RegisterPage';
 import ProductDetailPage from '../pages/ProductDetailPage';
 import CheckoutPage from '../pages/CheckoutPage';
 import PaymentPage from '../pages/PaymentPage';
+import OrderPage from '../pages/OrderPage';
 import { CartProvider } from '../src/Components/CartContext';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/account" element={<AccountPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/orders" element={<OrderPage />} />
         {/*<Route path="/product/:productId" element={<ProductDetailPage />} />*/}
         <Route path="/product/:productName" element={<ProductDetailPage />} />
 

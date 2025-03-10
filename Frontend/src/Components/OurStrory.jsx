@@ -4,9 +4,7 @@ function OurStrory() {
     return (
         <>
             <div className="our-story">
-                <div className="our-story-img">
-
-                </div>
+               
 
                 <div className="our-story-content">
                     <div className="our-story-header">
